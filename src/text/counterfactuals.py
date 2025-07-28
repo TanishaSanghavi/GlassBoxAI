@@ -3,21 +3,17 @@ from typing import List
 from nltk.corpus import wordnet
 import spacy
 import os
-from pathlib import Path
-from spacy.cli import download
 
 def get_nlp():
-    model_name = "en_core_web_sm"
     try:
-        return spacy.load(model_name)
+        return spacy.load("en_core_web_sm")
     except OSError:
-        # Try to download into a local directory
-        model_dir = Path("spacy_models") / model_name
-        if not model_dir.exists():
-            download(model_name)
-        return spacy.load(model_name)
+        # Fallback to local relative model
+        model_path = os.path.join(os.path.dirname(__file__), "en_core_web_sm")
+        return spacy.load(model_path)
 
 nlp = get_nlp()
+
 
 # ---------- Utility Functions ----------
 
