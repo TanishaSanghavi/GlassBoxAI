@@ -26,3 +26,4 @@ requests==2.32.4
 huggingface-hub==0.33.4
 PyYAML==6.0.2
 streamlit==1.46.1
+spacy==3.8.7
