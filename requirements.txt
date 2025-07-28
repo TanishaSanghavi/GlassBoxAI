@@ -1,0 +1,28 @@
+# NLP (Text)
+transformers==4.53.2
+tokenizers==0.21.2
+nltk==3.9.1
+regex==2024.11.6
+
+# Vision (Image)
+torch==2.7.1+cpu
+torchvision==0.22.1+cpu
+torchaudio==2.7.1+cpu
+opencv-python==4.12.0.88
+Pillow==11.3.0
+scikit-image==0.25.2
+
+# Explainability
+lime==0.2.0.1
+shap==0.48.0
+
+# Utilities & Viz
+matplotlib==3.10.3
+numpy==2.2.6
+scikit-learn==1.7.0
+tqdm==4.67.1
+pandas==2.3.1
+requests==2.32.4
+huggingface-hub==0.33.4
+PyYAML==6.0.2
+streamlit==1.46.1
