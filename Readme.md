@@ -10,6 +10,7 @@ An MultiModal XAI tool to visualize and interpret predictions made by text and i
 
 - **Text Classification**
   - ✅ LIME explanations (highlighted words)
+  - ✅ SHAP explanations (highlighted words)
   - ✅ Counterfactuals using antonyms (filtered to impactful POS)
 - **Image Classification**
   - ✅ Grad-CAM heatmaps
