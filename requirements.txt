@@ -19,7 +19,7 @@ matplotlib
 networkx
 nltk==3.9.1
 numpy
-opencv-python
+opencv-python-headless
 packaging
 pandas
 Pillow
