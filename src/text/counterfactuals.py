@@ -2,15 +2,22 @@ import random
 from typing import List
 from nltk.corpus import wordnet
 import spacy
-try:
-    nlp = spacy.load("en_core_web_sm")
-except OSError:
-    from spacy.cli import download
-    download("en_core_web_sm")
-    nlp = spacy.load("en_core_web_sm")
+import os
+from pathlib import Path
+from spacy.cli import download
 
-# Load SpaCy model for POS tagging
-nlp = spacy.load("en_core_web_sm")  # make sure this model is installed
+def get_nlp():
+    model_name = "en_core_web_sm"
+    try:
+        return spacy.load(model_name)
+    except OSError:
+        # Try to download into a local directory
+        model_dir = Path("spacy_models") / model_name
+        if not model_dir.exists():
+            download(model_name)
+        return spacy.load(model_name)
+
+nlp = get_nlp()
 
 # ---------- Utility Functions ----------
 
