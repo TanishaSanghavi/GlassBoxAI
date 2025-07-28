@@ -62,7 +62,7 @@ image_model, image_preprocess, class_names, image_device = get_image_model()
 if mode == "Text":
     st.header("✍️ Text Explanation")
 
-    text = st.text_area("Enter a sentence:", "The plot was weak but the cinematography was stunning.", height=120)
+    text = st.text_area("Enter a sentence:", "It was a beautiful scenery.", height=120)
     col1, col2 = st.columns(2)
     with col1:
         method_text = st.selectbox("Text Explanation Method", ["LIME", "SHAP"])
